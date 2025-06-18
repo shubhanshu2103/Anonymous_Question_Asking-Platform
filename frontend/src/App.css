@@ -1,42 +1,95 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 70%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color:dimgrey;
+}
+p,li,a,button{
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  text-decoration: none;
+}
+header{
+  height: 10rem;
+  /* box-shadow: burlywood; */
+  background-color: blanchedalmond;
+  width: 100%;
+}
+.container{
+  max-width: 132rem;
+  margin: auto;
+  height: 10rem;
+}
+.grid{
+  display: grid;
+}
+.logo{
+  margin-left: 10%;
+}
+.navbar-grid{
+  grid-template-columns: .5fr 1fr;
+  align-items: center;
+  height: 10rem;
+}
+nav ul{
+  display: flex;
+  justify-content: end;
+  margin-right: 10%;
+  gap: 3.4rem;
+  
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+li{
+  list-style-type: none;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+a{
+  color:rgb(43, 119, 226);
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+a:hover{
+  color: red;
+  text-decoration: underline;
+}
+.menu{
+  display: none;
+}
+button{
+  cursor: pointer;
+  all:unset;
+  font-size: 25px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:998px){
+  .web_menu{
+    display: none;
+
   }
-  to {
-    transform: rotate(360deg);
+  .menu{
+    display: inline-block;
+    text-align: end;
+    margin-right: 15%;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .mobile_menu{
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    background-color:whitesmoke;
+    width: 100%;
+  } 
+  .mobile_menu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .mobile_menu li:first-child{
+    margin-top: 1.2rem;
+  }
+  .mobile_menu li:last-child{
+    margin-bottom: 1.2rem;
+  }
+  
 }
